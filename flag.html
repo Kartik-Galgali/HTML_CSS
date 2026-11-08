@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Indian National Flag</title>
+    <style>
+        body {
+            background-color: lightgray;
+            text-align: center;
+        }
+
+        h1 {
+            color: navy;
+        }
+
+        .flag {
+            width: 450px;
+            height: 300px;
+            margin: 50px auto 0;
+            border: 1px solid black;
+        }
+
+        .saffron {
+            height: 100px;
+            background-color: #FF9933;
+        }
+
+        .white {
+            height: 100px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .green {
+            height: 100px;
+            background-color: #138808;
+        }
+
+        .chakra {
+            width: 85px;
+            height: 85px;
+            border: 4px solid navy;
+            border-radius: 50%;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .chakra::before {
+            content: "";
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            background-color: navy;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+        }
+
+        .chakra::after {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background-color: navy;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        .pole {
+            width: 8px;
+            height: 400px;
+            background-color: gray;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Indian National Flag</h1>
+
+    <div class="flag">
+
+        <div class="saffron"></div>
+
+        <div class="white">
+            <div class="chakra"></div>
+        </div>
+
+        <div class="green"></div>
+
+    </div>
+
+    <div class="pole"></div>
+
+</body>
+</html>

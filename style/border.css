@@ -1,0 +1,37 @@
+h1{
+   border: 3px solid purple;
+    border-radius: 10px;
+}
+#p1{
+   border-bottom: 3px solid red;
+   border-top: 3px dashed yellow;
+   border-left: 3px dotted orange;
+    border-right: 3px double rgb(5, 249, 5);
+
+    border-radius: 10px;
+}
+#p2{
+    border-style: groove;
+    border-color: black;
+    border-width: 3px;
+    border-radius: 0px;
+}
+#p3{
+   border-style: ridge;
+    border-color: black;
+   border-width: 3px;
+   border-radius: 0px;
+}
+#p4{
+    border-style: inset;
+    border-color: black;
+   border-width: 3px;
+   border-radius: 0px;
+}
+
+#p5{
+   border-style: outset;
+   border-color: black;
+   border-width: 3px;
+   border-radius: 0px;
+}

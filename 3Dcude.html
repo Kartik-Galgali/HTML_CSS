@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3D Rotating Cube</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111827;
+        }
+
+        /* 3D perspective */
+        .container {
+            perspective: 800px;
+        }
+
+        /* Cube */
+        .cube {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotateCube 5s infinite linear;
+        }
+
+        /* Common face properties */
+        .face {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            border: 2px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            opacity: 0.85;
+        }
+
+        /* Six faces */
+        .front {
+            background: red;
+            transform: translateZ(75px);
+        }
+
+        .back {
+            background: blue;
+            transform: rotateY(180deg) translateZ(75px);
+        }
+
+        .right {
+            background: green;
+            transform: rotateY(90deg) translateZ(75px);
+        }
+
+        .left {
+            background: orange;
+            transform: rotateY(-90deg) translateZ(75px);
+        }
+
+        .top {
+            background: purple;
+            transform: rotateX(90deg) translateZ(75px);
+        }
+
+        .bottom {
+            background: brown;
+            transform: rotateX(-90deg) translateZ(75px);
+        }
+
+        /* Rotation animation */
+        @keyframes rotateCube {
+            from {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+
+            to {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="cube">
+
+            <div class="face front">FRONT</div>
+            <div class="face back">BACK</div>
+            <div class="face right">RIGHT</div>
+            <div class="face left">LEFT</div>
+            <div class="face top">TOP</div>
+            <div class="face bottom">BOTTOM</div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

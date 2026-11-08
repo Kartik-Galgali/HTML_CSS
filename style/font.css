@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Lobster;
+    src: url(fonts/Lobster-Regular.ttf);
+}
+
+@font-face {
+    font-family: Satisfy;
+    src: url(fonts/Satisfy-Regular.ttf);
+}
+
+h1{
+    font-family: Lobster, Verdana, Arial;
+}
+
+p{
+    font-family: Satisfy, "Lucida Console", "Courier New";
+    font-size: 1em;
+    font-weight: bold;
+    font-style: italic;
+}

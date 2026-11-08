@@ -1,0 +1,53 @@
+a:link{
+    color: rgb(5, 237, 5);
+}
+a:hover{
+    color: orange;
+    font-size: 1.1em;
+}
+a:active{
+    color: red;
+    font-size: 1.1em;
+}
+a:visited{
+    color: rgb(238, 12, 238);
+}
+
+li:hover{
+    background-color: yellow;
+}
+
+li:not(:hover){
+    background-color: red;
+}
+
+li:nth-child(1){
+    background-color: rgb(5, 237, 5);
+}
+hr{
+    border: 3px solid blue;
+}
+
+#greeting p{
+    background-color: lightblue;
+    padding: 10px;
+    display: none;
+}
+#greeting:hover p{
+    display: inline-block;
+}
+
+input:focus {
+    border: 2px solid blue;
+    background-color: lightyellow;
+    outline: none;
+}
+
+input:checked {
+    accent-color: red;
+}
+
+:disabled {
+    background-color: blackgrey;
+    cursor: not-allowed;
+}

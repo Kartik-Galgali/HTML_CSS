@@ -1,0 +1,89 @@
+
+/* 1. HOVER */
+.hover-btn:hover {
+    background-color: red;
+    color: white;
+}
+
+/* 2. FOCUS */
+input:focus {
+    border: 2px solid blue;
+    outline: none;
+}
+
+/* 3. ACTIVE */
+.active-btn:active {
+    background-color: green;
+}
+
+/* 4. VISITED */
+a:visited {
+    color: purple;
+}
+
+/* 5. FIRST CHILD */
+.languages li:first-child {
+    color: red;
+}
+
+/* 6. LAST CHILD */
+.languages li:last-child {
+    color: green;
+}
+
+/* 7. NTH CHILD */
+.numbers li:nth-child(even) {
+    background-color: lightblue;
+}
+
+/* 8. CHECKED */
+input:checked {
+    accent-color: green;
+}
+
+/* 9. DISABLED */
+button:disabled {
+    background-color: gray;
+    color: white;
+}
+
+/* 10. BEFORE */
+.before-after::before {
+    content: "Hello ";
+    color: red;
+}
+
+/* 11. AFTER */
+.before-after::after {
+    content: " Welcome!";
+    color: blue;
+}
+
+/* 12. FIRST LETTER */
+.letter::first-letter {
+    color: red;
+    font-size: 35px;
+}
+
+/* 13. FIRST LINE */
+.line::first-line {
+    color: blue;
+    font-weight: bold;
+}
+
+/* 14. SELECTION */
+.select::selection {
+    background-color: yellow;
+    color: red;
+}
+
+/* 15. PLACEHOLDER */
+input::placeholder {
+    color: lightgreen;
+    font-style: italic;
+}
+
+/* 16. MARKER */
+.marker li::marker {
+    color: red;
+}
