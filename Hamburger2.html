@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Creative Website</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        /* NAVIGATION BAR */
+
+        nav {
+            height: 75px;
+            padding: 0 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #111827;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        /* HAMBURGER */
+
+        .menu-wrap {
+            display: none;
+            position: relative;
+        }
+
+        .hamburger {
+            width: 35px;
+            height: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 100%;
+            height: 3px;
+            background: white;
+            border-radius: 5px;
+            transition: 0.4s;
+        }
+
+        /* HAMBURGER TO CROSS */
+
+        .menu-wrap:hover .hamburger span:nth-child(1),
+        .menu-wrap:focus-within .hamburger span:nth-child(1) {
+            transform: translateY(12px) rotate(45deg);
+        }
+
+        .menu-wrap:hover .hamburger span:nth-child(2),
+        .menu-wrap:focus-within .hamburger span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-wrap:hover .hamburger span:nth-child(3),
+        .menu-wrap:focus-within .hamburger span:nth-child(3) {
+            transform: translateY(-12px) rotate(-45deg);
+        }
+
+        /* MOBILE DROPDOWN */
+
+        @media screen and (max-width: 768px) {
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 48px;
+                right: 0;
+                width: 220px;
+                background: #1e293b;
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+                border-radius: 10px;
+                box-shadow: 0 8px 20px #0005;
+            }
+
+            .menu-wrap {
+                display: block;
+            }
+
+            .menu-wrap:hover .nav-links,
+            .menu-wrap:focus-within .nav-links {
+                display: flex;
+            }
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            min-height: 550px;
+            padding: 100px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            background: linear-gradient(120deg, #0f172a, #172554);
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 60px);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            padding: 14px 28px;
+            background: #0284c7;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .hero button:hover {
+            background: #38bdf8;
+            transform: translateY(-4px);
+        }
+
+        .hero-image {
+            width: 350px;
+            height: 300px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #2563eb, #38bdf8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            box-shadow: 0 15px 40px #0005;
+        }
+
+        /* SERVICES */
+
+        .services {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 35px;
+            margin-bottom: 40px;
+        }
+
+        .service-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 35px 20px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: #263b5c;
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 25px;
+            text-align: center;
+            background: #111827;
+            color: #94a3b8;
+        }
+
+        /* RESPONSIVE */
+
+        @media screen and (max-width: 768px) {
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 70px 6%;
+            }
+
+            .hero-image {
+                width: 250px;
+                height: 220px;
+            }
+
+            .service-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <div class="logo">Creative.</div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- HAMBURGER MENU -->
+
+        <div class="menu-wrap">
+
+            <div class="hamburger" tabindex="0"
+                 role="button" aria-label="Navigation menu">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                Create Something
+                <span>Amazing.</span>
+            </h1>
+
+            <p>
+                Welcome to our creative website.
+                We build beautiful, modern and responsive
+                digital experiences using modern web technologies.
+            </p>
+
+            <button>Explore More</button>
+
+        </div>
+
+        <div class="hero-image">
+            ✨
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES SECTION -->
+
+    <section class="services" id="services">
+
+        <h2>Our Services</h2>
+
+        <div class="service-container">
+
+            <div class="card">
+                <h3>Web Design</h3>
+                <p>
+                    Beautiful and modern website designs
+                    for your business.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Development</h3>
+                <p>
+                    Responsive websites using HTML,
+                    CSS and modern technologies.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Creative Ideas</h3>
+                <p>
+                    Unique digital experiences
+                    to make your brand stand out.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer id="contact">
+        &copy; 2026 Creative Website | All Rights Reserved
+    </footer>
+
+</body>
+</html>
